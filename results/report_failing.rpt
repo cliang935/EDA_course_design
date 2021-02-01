@@ -1,0 +1,12 @@
+**************************************************
+Report         : failing_points
+
+Reference      : r:/WORK/mult64x64_top
+Implementation : i:/WORK/mult64x64_top
+Version        : I-2013.12-SP4
+Date           : Wed Jul  8 18:14:09 2020
+**************************************************
+
+No failing compare points.
+
+1

@@ -1,0 +1,58 @@
+set search_path { ./ \
+                  ../ \
+                  ../../src/ }
+
+set link_library { scc55nll_hd_rvt_tt_v1p2_25c_basic.db dw_foundation.sldb }
+set target_library { scc55nll_hd_rvt_tt_v1p2_25c_basic.db }
+set compile_enable_register_merging false
+set hdlin_check_no_latch true
+set verilogout_no_tri true
+set compile_seqmap_propagate_constants false
+set_svf ../result/mult16x16.svf
+analyze -format verilog -define { } { half_adder.v \
+				      full_adder.v \
+				      counter_5to3.v \
+				      booth_r4_16x16.v \
+				      wtree_3to2_16x16.v \
+				      wtree_4to2_16x16.v \
+				      mult16x16.v \
+				      wrap.v }
+elaborate wrap
+link
+create_clock -period 0.666 i_clk
+set_input_delay -clock i_clk -max 0.01 { i_multa_ns i_multb_ns i_multa i_multb }
+set_input_delay -clock i_clk -min 0.01 { i_multa_ns i_multb_ns i_multa i_multb }
+set_output_delay -clock i_clk -max 0.01 { o_product }
+set_output_delay -clock i_clk -min 0.01 { o_product }
+set_false_path -from i_rstn
+set_max_area 0
+set_host_options -max_cores 8
+#check_design > ../result/design_chk_pre_comp.rpt
+#check_timing > ../result/timing_chk_pre_comp.rpt
+define_name_rules verilog -case_insensitive
+define_name_rules verilog -type net \
+			  -allowed "a-zA-Z0-9_" \
+			  -first_restricted "_0-9N" \
+			  -replacement_char "_" \
+			  -prefix "n"
+define_name_rules verilog -type cell \
+			  -allowed "a-zA-Z0-9_" \
+			  -first_restricted "_0-9 " \
+			  -replacement_char "_" \
+			  -prefix "u"
+define_name_rules verilog -type port \
+			  -allowed "a-zA-Z0-9_" \
+			  -first_restricted "_0-9 " \
+			  -replacement_char "_" \
+			  -prefix "p"
+compile_ultra 
+compile_ultra -inc
+change_names -hierarchy -rules verilog
+remove_unconnected_ports [find -hierarchy cell "*"]
+check_design > ../result/design_chk_aft_comp.rpt
+check_timing > ../result/timing_chk_aft_comp.rpt
+report_timing -delay_type max -cap -max 50000 -sort_by slack > ../result/timing_max.rpt
+report_area > ../result/area.rpt
+write -format verilog -h -o ../result/mul16x16.vg
+set_svf off
+exit

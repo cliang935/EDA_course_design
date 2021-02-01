@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : mult64x64_top
+Version: O-2018.06-SP1
+Date   : Wed Jul  8 14:52:45 2020
+****************************************
+
+Library(s) Used:
+
+    smic13_ss (File: /stupart1/users/stu3082/mult/db/smic13_ss.db)
+
+Number of ports:                        15862
+Number of nets:                         42943
+Number of cells:                        28539
+Number of combinational cells:          22012
+Number of sequential cells:              5159
+Number of macros/black boxes:               0
+Number of buf/inv:                       2579
+Number of references:                       3
+
+Combinational area:             235765.530358
+Buf/Inv area:                    21945.204036
+Noncombinational area:          187417.078045
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                423182.608403
+Total area:                 undefined
+1

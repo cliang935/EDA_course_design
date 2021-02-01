@@ -1,0 +1,58 @@
+Coverage Report Summary Data by file
+
+=================================================================================
+=== File: C:/Users/Liang Chen/Desktop/EDA/mult64x64/sim/src/booth_r4_64x64.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            7         7         0     100.0
+    Branches                        12        10         2      83.3
+    FEC Condition Terms              4         4         0     100.0
+    Toggle Bins                   9794      3032      6762      30.9
+
+=================================================================================
+=== File: C:/Users/Liang Chen/Desktop/EDA/mult64x64/sim/src/counter_5to3.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            4         4         0     100.0
+    FEC Expression Terms            16        16         0     100.0
+    Toggle Bins                     18        18         0     100.0
+
+=================================================================================
+=== File: C:/Users/Liang Chen/Desktop/EDA/mult64x64/sim/src/full_adder.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            2         2         0     100.0
+    FEC Expression Terms             6         3         3      50.0
+    Toggle Bins                     18         7        11      38.8
+
+=================================================================================
+=== File: C:/Users/Liang Chen/Desktop/EDA/mult64x64/sim/src/half_adder.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                            2         2         0     100.0
+    FEC Expression Terms             4         4         0     100.0
+    Toggle Bins                      8         8         0     100.0
+
+=================================================================================
+=== File: C:/Users/Liang Chen/Desktop/EDA/mult64x64/sim/src/mult64x64_top.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Toggle Bins                   9632      2883      6749      29.9
+
+=================================================================================
+=== File: C:/Users/Liang Chen/Desktop/EDA/mult64x64/sim/src/wtree_4to2_64x64.v
+=================================================================================
+    Enabled Coverage            Active      Hits    Misses % Covered
+    ----------------            ------      ----    ------ ---------
+    Stmts                          145       145         0     100.0
+    Branches                        12        12         0     100.0
+    Toggle Bins                  71258     15207     56051      21.3
+
+
+Total Coverage By File (code coverage only, filtered view): 80.6%
+

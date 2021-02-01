@@ -1,0 +1,104 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : mult64x64_top
+Version: O-2018.06-SP1
+Date   : Wed Jul  8 14:52:46 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WORST   Library: smic13_ss
+Wire Load Model Mode: segmented
+
+  Startpoint: wtree_4to2_64x64_u0/stg5_co1_ff_reg[16]
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: o_product[127]
+            (output port clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  mult64x64_top      reference_area_1000000
+                                           smic13_ss
+  wtree_4to2_64x64   reference_area_1000000
+                                           smic13_ss
+  wtree_4to2_64x64_DW01_add_1
+                     reference_area_20000  smic13_ss
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  wtree_4to2_64x64_u0/stg5_co1_ff_reg[16]/CK (FFDQRHD1X)
+                                                          0.00 #     0.00 r
+  wtree_4to2_64x64_u0/stg5_co1_ff_reg[16]/Q (FFDQRHD1X)
+                                                          0.39       0.39 r
+  wtree_4to2_64x64_u0/add_1849/B[17] (wtree_4to2_64x64_DW01_add_1)
+                                                          0.00       0.39 r
+  wtree_4to2_64x64_u0/add_1849/U648/Z (OR2HDMX)           0.22       0.60 r
+  wtree_4to2_64x64_u0/add_1849/U1159/Z (INVCLKHD1X)       0.15       0.75 f
+  wtree_4to2_64x64_u0/add_1849/U284/Z (NOR2HDUX)          0.27       1.03 r
+  wtree_4to2_64x64_u0/add_1849/U324/Z (NOR2HDUX)          0.14       1.16 f
+  wtree_4to2_64x64_u0/add_1849/U323/Z (NOR2HDUX)          0.33       1.49 r
+  wtree_4to2_64x64_u0/add_1849/U1157/Z (OAI21HDMX)        0.14       1.63 f
+  wtree_4to2_64x64_u0/add_1849/U25/Z (NAND2HDUX)          0.33       1.96 r
+  wtree_4to2_64x64_u0/add_1849/U72/Z (NAND2HDUX)          0.21       2.17 f
+  wtree_4to2_64x64_u0/add_1849/U71/Z (AOI21HDMX)          0.21       2.38 r
+  wtree_4to2_64x64_u0/add_1849/U1147/Z (OAI21HDMX)        0.14       2.52 f
+  wtree_4to2_64x64_u0/add_1849/U9/Z (AND2HD1X)            0.22       2.74 f
+  wtree_4to2_64x64_u0/add_1849/U115/Z (NAND2HDUX)         0.19       2.93 r
+  wtree_4to2_64x64_u0/add_1849/U114/Z (NAND2HDUX)         0.15       3.08 f
+  wtree_4to2_64x64_u0/add_1849/U113/Z (NAND2HDUX)         0.21       3.30 r
+  wtree_4to2_64x64_u0/add_1849/U271/Z (AND2HD1X)          0.18       3.48 r
+  wtree_4to2_64x64_u0/add_1849/U270/Z (OR2HDMX)           0.27       3.75 r
+  wtree_4to2_64x64_u0/add_1849/U92/Z (NAND2HD1X)          0.16       3.91 f
+  wtree_4to2_64x64_u0/add_1849/U1102/Z (INVCLKHD1X)       0.07       3.98 r
+  wtree_4to2_64x64_u0/add_1849/U269/Z (NAND2HDUX)         0.16       4.14 f
+  wtree_4to2_64x64_u0/add_1849/U267/Z (NAND2HD1X)         0.21       4.35 r
+  wtree_4to2_64x64_u0/add_1849/U88/Z (NAND2HD1X)          0.15       4.50 f
+  wtree_4to2_64x64_u0/add_1849/U1098/Z (INVCLKHD1X)       0.07       4.56 r
+  wtree_4to2_64x64_u0/add_1849/U356/Z (NAND2HDUX)         0.16       4.72 f
+  wtree_4to2_64x64_u0/add_1849/U354/Z (NAND2HD1X)         0.18       4.90 r
+  wtree_4to2_64x64_u0/add_1849/U292/Z (NAND2HD1X)         0.14       5.03 f
+  wtree_4to2_64x64_u0/add_1849/U111/Z (OR2HDMX)           0.24       5.28 f
+  wtree_4to2_64x64_u0/add_1849/U1052/Z (INVCLKHD1X)       0.07       5.34 r
+  wtree_4to2_64x64_u0/add_1849/U359/Z (NAND2HDUX)         0.16       5.50 f
+  wtree_4to2_64x64_u0/add_1849/U357/Z (NAND2HD1X)         0.18       5.68 r
+  wtree_4to2_64x64_u0/add_1849/U316/Z (NAND2HD1X)         0.13       5.81 f
+  wtree_4to2_64x64_u0/add_1849/U275/Z (NAND3B1HDMX)       0.23       6.04 f
+  wtree_4to2_64x64_u0/add_1849/U273/Z (NAND2HD1X)         0.17       6.22 r
+  wtree_4to2_64x64_u0/add_1849/U317/Z (NAND2HD1X)         0.13       6.35 f
+  wtree_4to2_64x64_u0/add_1849/U278/Z (NAND3B1HDMX)       0.23       6.58 f
+  wtree_4to2_64x64_u0/add_1849/U276/Z (NAND2HD1X)         0.17       6.76 r
+  wtree_4to2_64x64_u0/add_1849/U318/Z (NAND2HD1X)         0.13       6.89 f
+  wtree_4to2_64x64_u0/add_1849/U281/Z (NAND3B1HDMX)       0.23       7.12 f
+  wtree_4to2_64x64_u0/add_1849/U279/Z (NAND2HD1X)         0.16       7.28 r
+  wtree_4to2_64x64_u0/add_1849/U333/Z (NAND2HDUX)         0.18       7.46 f
+  wtree_4to2_64x64_u0/add_1849/U332/Z (NAND2HD1X)         0.18       7.64 r
+  wtree_4to2_64x64_u0/add_1849/U363/Z (NAND2HDUX)         0.15       7.79 f
+  wtree_4to2_64x64_u0/add_1849/U362/Z (AND2HD1X)          0.25       8.04 f
+  wtree_4to2_64x64_u0/add_1849/U1016/Z (OAI21HDMX)        0.13       8.17 r
+  wtree_4to2_64x64_u0/add_1849/U645/Z (XNOR2HD1X)         0.36       8.53 f
+  wtree_4to2_64x64_u0/add_1849/SUM[127] (wtree_4to2_64x64_DW01_add_1)
+                                                          0.00       8.53 f
+  wtree_4to2_64x64_u0/final_p[127] (wtree_4to2_64x64)     0.00       8.53 f
+  o_product[127] (out)                                    0.00       8.53 f
+  data arrival time                                                  8.53
+
+  clock clock (rise edge)                                20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  output external delay                                  -8.00      12.00
+  data required time                                                12.00
+  --------------------------------------------------------------------------
+  data required time                                                12.00
+  data arrival time                                                 -8.53
+  --------------------------------------------------------------------------
+  slack (MET)                                                        3.47
+
+
+1

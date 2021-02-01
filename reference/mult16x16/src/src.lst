@@ -1,0 +1,9 @@
+/eda/synopsys/syn/dw/sim_ver/DW02_mult_6_stage.v
+../src/full_adder.v
+../src/half_adder.v
+../src/counter_5to3.v
+../src/booth_r4_16x16.v
+../src/wtree_3to2_16x16.v
+../src/wtree_4to2_16x16.v
+../src/mult16x16.v
+../src/testbench.v
